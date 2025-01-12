@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="((lang))">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const audio = JSON.parse('(audio)');
+        const langFile = JSON.parse('(langFile)');
+    </script>
+    <style>
+        main {
+            flex-direction: column;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/assets/librechord_icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    ((header))
+    <main>
+        <div class="cover-art-gradient"></div>
+        <div class="song-page">
+            <div class="cover-art">
+                <img width="300" height="300">
+            </div>
+            <div class="song-info">
+                <div class="song-controls">
+                    <div class="song-upper-part">
+                        <play-button>
+                            <bg-img id="play"></bg-img>
+                        </play-button>
+                        <div class="song-metadata">
+                            <song-title></song-title>
+                            <div class="song-metadata-lower-part">
+                                <song-artist>
+                                    <img width="16" height="16">
+                                    <artist-name></artist-name>
+                                </song-artist>
+                                <span>・</span>
+                                <song-timestamp></song-timestamp>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="song-admin-controls">
+                        <a>
+                            <img src="/assets/pencil.svg" width="24" title="((edit))">
+                        </a>
+                        <img src="/assets/trash.svg" width="24" title="((remove))" class="trash-btn">
+                    </div>
+                </div>
+                <waveform>
+                </waveform>
+                <div class="time-progress">
+                    <div class="time-elapsed"></div>
+                    <div class="time-total"></div>
+                </div>
+                <div class="song-lower-part">
+                    <div class="volume-wrapper">
+                        <label for="volume">((volume)):</label>
+                        <input type="range" id="volume" min="0" max="100" value="100" step="1">
+                    </div>
+                    <div class="listens-count">
+                        <img src="/assets/play.svg" width="8">
+                        <span class="listens"></span>
+                    </div>
+                </div>
+                <div class="like-button-wrapper" title="((like))">
+                    <div class="like-button">
+                        <img src="/assets/heart.svg">
+                        <span class="like-count"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comments-wrapper">
+            <h2 class="comments-header">((comments_load))</h2>
+            <hr>
+            <textarea class="comment-textarea" id="comment-textarea" placeholder="((send_comment))"></textarea>
+            <div class="send-button">
+                <button>((send))</button>
+            </div>
+        </div>
+    </main>
+    <audio></audio>
+    <script src="/js/wavesurfer.min.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/audio.js"></script>
+</body>
+
+</html>

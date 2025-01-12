@@ -1,0 +1,197 @@
+{
+    "joined_date": "Joined {timestamp}",
+    "login": "Log in",
+    "username_or_email": "Username or e-mail address",
+    "password": "Password",
+    "no_acc_yet": "Don't have an account yet?",
+    "signup": "Sign up",
+    "username": "Username",
+    "email": "E-mail address",
+    "already_acc": "Already have an account?",
+    "lang": "en",
+    "please_type_username_or_email": "Please type your username or e-mail address.",
+    "please_type_password": "Please type your password.",
+    "please_type_username": "Please type your username.",
+    "please_type_email": "Please type your e-mail address.",
+    "incorrect": "Username or password is incorrect.",
+    "must_be_3ch": "A username must be at least 3 characters long.",
+    "must_be_6ch": "A password must be at least 6 characters long.",
+    "username_chlimit": "A username can contain only Latin characters, numbers, an underscore, a hyphen and a period.",
+    "invalid_email": "This e-mail address is invalid.",
+    "email_taken": "This e-mail address is already taken.",
+    "username_taken": "This username is already taken.",
+    "songs": "Songs",
+    "search": "Search",
+    "upload_audio": "Upload a song",
+    "filesize_limit": "The audio file's size cannot be more than 100 MB.",
+    "uploading": "Uploading...",
+    "converting": "Converting...",
+    "finished": "Done!",
+    "can_change_song_settings": "You can change the song's details below.",
+    "search_results": "Search results for \"{query}\"",
+    "settings": "Settings",
+    "logout": "Log out",
+    "users_page": "{name}'s page | Librechord",
+    "couldnt_find": "Couldn't find anything",
+    "no_search_results": "There are no search results for \"<b>{query}</b>\".",
+    "search_page_h": "What do you want to play?",
+    "edit": "Edit",
+    "edit_a_song": "Editing {name}",
+    "genres": [
+        {
+            "id": 0,
+            "name": "Alternative"
+        },
+        {
+            "id": 1,
+            "name": "Ambient"
+        },
+        {
+            "id": 2,
+            "name": "Anime"
+        },
+        {
+            "id": 3,
+            "name": "Blues"
+        },
+        {
+            "id": 4,
+            "name": "Chanson"
+        },
+        {
+            "id": 5,
+            "name": "Chiptune"
+        },
+        {
+            "id": 6,
+            "name": "Cinematic"
+        },
+        {
+            "id": 7,
+            "name": "Classical"
+        },
+        {
+            "id": 8,
+            "name": "Country"
+        },
+        {
+            "id": 9,
+            "name": "Dance"
+        },
+        {
+            "id": 10,
+            "name": "Drum n Bass"
+        },
+        {
+            "id": 11,
+            "name": "Dubstep"
+        },
+        {
+            "id": 12,
+            "name": "Funk"
+        },
+        {
+            "id": 13,
+            "name": "Grunge"
+        },
+        {
+            "id": 14,
+            "name": "Hardstyle"
+        },
+        {
+            "id": 15,
+            "name": "Heavy Metal"
+        },
+        {
+            "id": 16,
+            "name": "Hip-Hop"
+        },
+        {
+            "id": 17,
+            "name": "House"
+        },
+        {
+            "id": 18,
+            "name": "Indie Rock"
+        },
+        {
+            "id": 19,
+            "name": "Industrial"
+        },
+        {
+            "id": 20,
+            "name": "Jazz"
+        },
+        {
+            "id": 21,
+            "name": "Pop Rock"
+        },
+        {
+            "id": 22,
+            "name": "Punk Rock"
+        },
+        {
+            "id": 23,
+            "name": "R&B"
+        },
+        {
+            "id": 24,
+            "name": "Rock"
+        },
+        {
+            "id": 25,
+            "name": "Synthwave"
+        },
+        {
+            "id": 26,
+            "name": "Techno"
+        },
+        {
+            "id": 27,
+            "name": "Trance"
+        },
+        {
+            "id": 28,
+            "name": "Phonk"
+        }
+    ],
+    "title": "Title",
+    "genre": "Genre",
+    "language": "Language",
+    "required": "required",
+    "please_type_title": "Please type the song title.",
+    "please_choose_genre": "Please choose the song genre.",
+    "save": "Save",
+    "remove": "Remove",
+    "delete_warn": "Are you sure you want to remove this song?",
+    "error_happened": "An error happened.",
+    "upload_cover_art": "Upload a cover artwork",
+    "file_received": "File received",
+    "hit_save": "Hit the \"Save\" button to upload",
+    "remove_cover_art": "Remove the cover art",
+    "delete_cover_warn": "Are you sure you want to remove the cover art?",
+    "cover_deleted": "The cover art was removed.",
+    "settings_title": "User settings",
+    "oops": "Whoops...",
+    "no_access": "You don't have access to this page.",
+    "not_found": "This page wasn't found.",
+    "display_name": "Display name",
+    "delete_account": "Delete account",
+    "delete_acc_warn": "Are you sure you want to delete your account?",
+    "upload_avatar": "Upload an avatar",
+    "remove_avatar": "Remove the avatar",
+    "delete_avatar_warn": "Are you sure you want to remove your avatar?",
+    "avatar_deleted": "Your avatar was removed.",
+    "welcome": "Welcome to Librechord.",
+    "lets_begin": "Let's start off by <a href=\"/login\" target=\"_blank\">making an account</a>.",
+    "volume": "Volume",
+    "favorites": "Favorites",
+    "lang_name": "English",
+    "current_lang": "current",
+    "like": "I like it!",
+    "no_fav_songs": "You don't have any favorite songs as of now.",
+    "comments_load": "Loading comments...",
+    "send_comment": "Send a comment...",
+    "send": "Send",
+    "delete_comment_warn": "Are you sure you want to delete this comment?"
+}

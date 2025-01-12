@@ -1,0 +1,197 @@
+{
+    "joined_date": "{timestamp}にユーザーになった",
+    "login": "ログイン",
+    "username_or_email": "ユーザー名またはメールアドレス",
+    "password": "パスワード",
+    "no_acc_yet": "アカウントがありませんか?",
+    "signup": "登録",
+    "username": "ユーザー名",
+    "email": "メールアドレス",
+    "already_acc": "アカウントがありますか?",
+    "lang": "ja",
+    "please_type_username_or_email": "ユーザー名またはメールアドレスを入力してください。",
+    "please_type_password": "パスワードを入力してください。",
+    "please_type_username": "ユーザー名を入力してください。",
+    "please_type_email": "メールアドレスを入力してください。",
+    "incorrect": "ユーザー名またはパスワードが正しくありません。",
+    "must_be_3ch": "ユーザー名が3文字以下にすることはできません。",
+    "must_be_6ch": "パスワードが6文字以下にすることはできません。",
+    "username_chlimit": "ユーザー名には、ラテン文字、数字、アンダースコア、ハイフン、ピリオドのみを使用できます。",
+    "invalid_email": "このメールアドレスの形式が正しくありません。",
+    "email_taken": "このメールアドレスは既に使用されています。",
+    "username_taken": "このユーザー名は既に使用されています。",
+    "songs": "曲",
+    "search": "検索",
+    "upload_audio": "曲をアップロード",
+    "filesize_limit": "音声ファイルのサイズが100MB以上にすることはできません。",
+    "uploading": "アップロード中...",
+    "converting": "変換中...",
+    "finished": "完了!",
+    "can_change_song_settings": "以下で本曲の詳細を編集できます。",
+    "search_results": "「{query}」の検索結果",
+    "settings": "設定",
+    "logout": "ログアウト",
+    "users_page": "{name}のページ | Librechord",
+    "couldnt_find": "見つかりませんでした",
+    "no_search_results": "「<b>{query}</b>」の検索結果がありません。",
+    "search_page_h": "何を再生したいですか?",
+    "edit": "編集",
+    "edit_a_song": "{name}を編集",
+    "genres": [
+        {
+            "id": 0,
+            "name": "オルタナティブ"
+        },
+        {
+            "id": 1,
+            "name": "アンビエント"
+        },
+        {
+            "id": 2,
+            "name": "アニメ"
+        },
+        {
+            "id": 3,
+            "name": "ブルース"
+        },
+        {
+            "id": 4,
+            "name": "シャンソン"
+        },
+        {
+            "id": 5,
+            "name": "チップチューン"
+        },
+        {
+            "id": 6,
+            "name": "映画"
+        },
+        {
+            "id": 7,
+            "name": "クラシック"
+        },
+        {
+            "id": 8,
+            "name": "カントリー"
+        },
+        {
+            "id": 9,
+            "name": "ダンス"
+        },
+        {
+            "id": 10,
+            "name": "ドラムンベース"
+        },
+        {
+            "id": 11,
+            "name": "ダブステップ"
+        },
+        {
+            "id": 12,
+            "name": "ファンク"
+        },
+        {
+            "id": 13,
+            "name": "グランジ"
+        },
+        {
+            "id": 14,
+            "name": "ハードスタイル"
+        },
+        {
+            "id": 15,
+            "name": "ヘヴィメタル"
+        },
+        {
+            "id": 16,
+            "name": "ヒップホップ"
+        },
+        {
+            "id": 17,
+            "name": "ハウス"
+        },
+        {
+            "id": 18,
+            "name": "インディー・ロック"
+        },
+        {
+            "id": 19,
+            "name": "インダストリアル"
+        },
+        {
+            "id": 20,
+            "name": "ジャズ"
+        },
+        {
+            "id": 21,
+            "name": "ポップ・ロック"
+        },
+        {
+            "id": 22,
+            "name": "パンク・ロック"
+        },
+        {
+            "id": 23,
+            "name": "R&B"
+        },
+        {
+            "id": 24,
+            "name": "ロック"
+        },
+        {
+            "id": 25,
+            "name": "シンセウェーブ"
+        },
+        {
+            "id": 26,
+            "name": "テクノ"
+        },
+        {
+            "id": 27,
+            "name": "トランス"
+        },
+        {
+            "id": 28,
+            "name": "フォンク"
+        }
+    ],
+    "title": "タイトル",
+    "genre": "ジャンル",
+    "language": "言語",
+    "required": "必須",
+    "please_type_title": "曲のタイトルを入力してください。",
+    "please_choose_genre": "曲のジャンルを選んでください。",
+    "save": "保存",
+    "remove": "削除",
+    "delete_warn": "この曲を削除しますか？",
+    "error_happened": "エラーが発生しました。",
+    "upload_cover_art": "カバーアートをアップロード",
+    "file_received": "ファイルは受け付けた",
+    "hit_save": "「保存」ボタンをクリックしてアップロード",
+    "remove_cover_art": "カバーアートを削除",
+    "delete_cover_warn": "カバーアートを削除しますか？",
+    "cover_deleted": "カバーアートを削除しました。",
+    "settings_title": "ユーザー設定",
+    "oops": "おっと…",
+    "no_access": "このページにはアクセスできません。",
+    "not_found": "このページは見つかりません。",
+    "display_name": "表示名",
+    "delete_account": "アカウントを削除",
+    "delete_acc_warn": "アカウントを削除しますか？",
+    "upload_avatar": "アバターをアップロード",
+    "remove_avatar": "アバターを削除",
+    "delete_avatar_warn": "アバターを削除しますか？",
+    "avatar_deleted": "アバターを削除しました。",
+    "welcome": "Librechordへようこそ。",
+    "lets_begin": "<a href=\"/login\" target=\"_blank\">アカウントの作成</a>から始めましょう。",
+    "volume": "音量",
+    "favorites": "お気に入り",
+    "lang_name": "日本語",
+    "current_lang": "現在の言語",
+    "like": "いいね！",
+    "no_fav_songs": "現在、お気に入りの曲がありません。",
+    "comments_load": "コメントを読み込んでいます...",
+    "send_comment": "コメントを送信する...",
+    "send": "送信",
+    "delete_comment_warn": "このコメントを削除しますか？"
+}

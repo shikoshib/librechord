@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="((lang))">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>((settings_title)) | Librechord</title>
+    <script>
+        const langFile = JSON.parse('(langFile)');
+        const hasAnAvatar = JSON.parse("(hasAnAvatar)");
+    </script>
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+        .save-button {
+            display: inline;
+        }
+    </style>
+    <link rel="shortcut icon" href="/assets/librechord_icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    ((header))
+    <main>
+        <div class="user-settings-wrapper">
+            <div class="user-settings-top-part">
+                <h1>((settings_title))</h1>
+                <button class="danger" id="delete-account">((delete_account))</button>
+            </div>
+            <hr>
+            <div class="artwork-controls-wrapper">
+                <div class="upload-cover-art">
+                    <img src="/assets/upload.svg" draggable="false">
+                    <div class="cover-art-caption">((upload_avatar))</div>
+                </div>
+            </div>
+            <div class="user-controls-wrapper">
+                <div class="username-input user-input">
+                    <label for="username">((username)) <small>(((required)))</small>:</label>
+                    <input type="text" id="username">
+                    <small class="upload-input-error" id="username-error"></small>
+                </div>
+                <div class="display-name-input user-input">
+                    <label for="display-name">((display_name)):</label>
+                    <input type="text" id="display-name">
+                </div>
+            </div>
+            <div class="save-btn-wrapper">
+                <button class="save-button" disabled>
+                    ((save))
+                </button>
+            </div>
+        </div>
+    </main>
+    <form action="/api/uploadAvatar" method="post" enctype="multipart/form-data">
+        <input type="file" accept="image/*" hidden />
+    </form>
+    <script src="/js/settings.js"></script>
+</body>
+
+</html>

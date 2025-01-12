@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="((lang))">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>((search)) | Librechord</title>
+    <script>
+        const langFile = JSON.parse('(langFile)');
+    </script>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <link rel="shortcut icon" href="/assets/librechord_icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    ((header))
+    <script>document.querySelector("header .search-bar").remove();</script>
+    <main>
+        <h1 class="search-h">((search_page_h))</h1>
+        <div class="search-bar">
+            <bg-img class="magnifying-glass"></bg-img>
+            <input type="text" id="search-field" placeholder="((search))">
+            <bg-img class="x"></bg-img>
+        </div>
+    </main>
+    <script src="/js/global.js"></script>
+</body>
+
+</html>

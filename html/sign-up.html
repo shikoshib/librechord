@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="((lang))">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>((signup)) | Librechord</title>
+    <script>
+        const langFile = JSON.parse('(langFile)');
+    </script>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <style>
+        html[lang="ja"] {
+            .login-wrapper {
+                max-width: 260px;
+                width: 260px;
+            }
+        }
+
+        html[lang="ru"] {
+            .login-wrapper {
+                max-width: 360px;
+                width: 360px;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+            html[lang="ru"] {
+                h1 {
+                    font-size: 30px;
+                }
+
+                .login-wrapper {
+                    max-width: 320px;
+                    width: 320px;
+                }
+            }
+        }
+    </style>
+    <link rel="shortcut icon" href="/assets/librechord_icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="login-bg"></div>
+    <main>
+        <div class="login-wrapper">
+            <h1>((signup))</h1>
+            <div class="login-inputs">
+                <div class="input username-input">
+                    <label for="username">((username))</label>
+                    <input type="text" id="username">
+                    <span class="error-input"></span>
+                </div>
+                <div class="input email-input">
+                    <label for="email">((email))</label>
+                    <input type="email" id="email">
+                    <span class="error-input"></span>
+                </div>
+                <div class="input password-input">
+                    <label for="password">((password))</label>
+                    <input type="password" id="password">
+                    <span class="error-input"></span>
+                </div>
+            </div>
+            <button>((signup))</button>
+            <div class="register-offer">
+                ((already_acc)) <a href="login">((login))</a>
+            </div>
+        </div>
+    </main>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

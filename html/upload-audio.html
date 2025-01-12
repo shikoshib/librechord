@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="((lang))">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const langFile = JSON.parse('(langFile)');
+    </script>
+    <title>((upload_audio)) | Librechord</title>
+    <style>
+        main {
+            padding-top: 32px;
+            gap: 32px;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/assets/librechord_icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    ((header))
+
+    <main>
+        <div class="upload-audio-wrapper">
+            <img src="/assets/upload.svg" draggable="false" width="96">
+            <h1>((upload_audio))</h1>
+            <p>((filesize_limit))</p>
+        </div>
+        <div class="song-controls-wrapper">
+            <div class="title-input input-wrapper">
+                <label for="title">((title)) <small>(((required)))</small>:</label>
+                <input type="text" id="title">
+                <small class="upload-input-error" id="title-error"></small>
+            </div>
+            <div class="genre-input input-wrapper">
+                <label for="genre-name">((genre)) <small>(((required)))</small>:</label>
+                <div class="genre-dropdown dropdown">
+                    <div class="dropdown-top-part">
+                        <input type="text" id="genre-name">
+                        <img src="/assets/down.svg" draggable="false">
+                    </div>
+                    <div class="dropdown-list">
+                    </div>
+                </div>
+                <small class="upload-input-error" id="genre-error"></small>
+            </div>
+            <div class="language-input input-wrapper">
+                <label for="language-name">((language)):</label>
+                <div class="language-dropdown dropdown">
+                    <div class="dropdown-top-part">
+                        <input type="text" id="language-name">
+                        <img src="/assets/down.svg" draggable="false">
+                    </div>
+                    <div class="dropdown-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="save-button">
+            ((save))
+        </button>
+    </main>
+    <form action="/api/uploadAudio" method="post" enctype="multipart/form-data">
+        <input type="file" accept="audio/*" hidden />
+    </form>
+    <script src="/js/dropdown.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/upload.js"></script>
+</body>
+
+</html>

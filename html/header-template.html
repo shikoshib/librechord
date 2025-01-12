@@ -1,0 +1,71 @@
+<header>
+    <a href="/">
+        <div class="librechord-logo">
+            <img src="/assets/librechord_black.svg" width="48" height="48" draggable="false" />
+        </div>
+    </a>
+    <div class="search-bar">
+        <bg-img class="magnifying-glass"></bg-img>
+        <input type="text" id="search-field" placeholder="((search))">
+        <bg-img class="x"></bg-img>
+    </div>
+    <div class="user-wrapper">
+        <img>
+    </div>
+</header>
+<div class="user-dropdown-wrapper">
+    <div class="dropdown-header">
+        <div class="user-avatar">
+            <img>
+        </div>
+        <div class="user-name">
+            <a href="/me">
+                <div class="display-name"></div>
+            </a>
+            <a href="/me">
+                <div class="real-name"></div>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="dropdown-section">
+        <a href="/upload">
+            <dropdown-option>
+                <img src="/assets/upload.svg">
+                <span>((upload_audio))</span>
+            </dropdown-option>
+        </a>
+        <a href="/favorites">
+            <dropdown-option>
+                <img src="/assets/heart.svg">
+                <span>((favorites))</span>
+            </dropdown-option>
+        </a>
+        <dropdown-option class="dropdown-lang">
+            <img src="/assets/lang.svg">
+            <span>((language)): ((lang_name))</span>
+        </dropdown-option>
+        <a href="/settings">
+            <dropdown-option>
+                <img src="/assets/cog.svg">
+                <span>((settings))</span>
+            </dropdown-option>
+        </a>
+    </div>
+    <hr>
+    <div class="dropdown-section">
+        <a href="/logout">
+            <dropdown-option class="logout-section">
+                <img src="/assets/exit.svg">
+                <span>((logout))</span>
+            </dropdown-option>
+        </a>
+    </div>
+</div>
+<div class="languages-list-wrapper">
+    <lang-option id="lang-en">English</lang-option>
+    <lang-option id="lang-ja">日本語</lang-option>
+    <lang-option id="lang-ru">Русский</lang-option>
+</div>
+<div class="search-bar-blur"></div>
+<script src="/js/header.js"></script>

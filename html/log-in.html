@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="((lang))">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>((login)) | Librechord</title>
+    <script>
+        const langFile = JSON.parse('(langFile)');
+    </script>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="shortcut icon" href="/assets/librechord_icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="login-bg"></div>
+    <main>
+        <div class="login-wrapper">
+            <h1>((login))</h1>
+            <div class="login-inputs">
+                <div class="input login-input">
+                    <label for="login">((username_or_email))</label>
+                    <input type="text" id="login">
+                    <span class="error-input"></span>
+                </div>
+                <div class="input password-input">
+                    <label for="password">((password))</label>
+                    <input type="password" id="password">
+                    <span class="error-input"></span>
+                </div>
+            </div>
+            <button>((login))</button>
+            <div class="register-offer">
+                ((no_acc_yet)) <a href="signup">((signup))</a>
+            </div>
+        </div>
+    </main>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

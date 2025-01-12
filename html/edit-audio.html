@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="((lang))">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const audio = JSON.parse('(audio)');
+        const langFile = JSON.parse('(langFile)');
+        let copyAudio = JSON.parse(JSON.stringify(audio));
+        const hasAnArtwork = JSON.parse("(hasAnArtwork)");
+    </script>
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+        .song-controls-wrapper {
+            display: flex;
+        }
+
+        .save-button {
+            display: inline;
+        }
+    </style>
+    <link rel="shortcut icon" href="/assets/librechord_icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    ((header))
+    <main>
+        <div class="song-edit-wrapper">
+            <h1></h1>
+            <hr>
+            <div class="artwork-controls-wrapper">
+                <div class="upload-cover-art">
+                    <img src="/assets/upload.svg" draggable="false">
+                    <div class="cover-art-caption">((upload_cover_art))</div>
+                </div>
+            </div>
+            <div class="song-controls-wrapper">
+                <div class="title-input input-wrapper">
+                    <label for="title">((title)) <small>(((required)))</small>:</label>
+                    <input type="text" id="title">
+                    <small class="upload-input-error" id="title-error"></small>
+                </div>
+                <div class="genre-input input-wrapper">
+                    <label for="genre-name">((genre)) <small>(((required)))</small>:</label>
+                    <div class="genre-dropdown dropdown">
+                        <div class="dropdown-top-part">
+                            <input type="text" id="genre-name">
+                            <img src="/assets/down.svg" draggable="false">
+                        </div>
+                        <div class="dropdown-list">
+                        </div>
+                    </div>
+                    <small class="upload-input-error" id="genre-error"></small>
+                </div>
+                <div class="language-input input-wrapper">
+                    <label for="language-name">((language)):</label>
+                    <div class="language-dropdown dropdown">
+                        <div class="dropdown-top-part">
+                            <input type="text" id="language-name">
+                            <img src="/assets/down.svg" draggable="false">
+                        </div>
+                        <div class="dropdown-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="save-btn-wrapper">
+                <button class="save-button" disabled>
+                    ((save))
+                </button>
+            </div>
+        </div>
+    </main>
+    <form action="/api/uploadCoverArt" method="post" enctype="multipart/form-data">
+        <input type="file" accept="image/*" hidden />
+    </form>
+    <script src="/js/dropdown.js"></script>
+    <script src="/js/edit-audio.js"></script>
+</body>
+
+</html>

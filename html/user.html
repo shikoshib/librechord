@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="((lang))">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const target = JSON.parse('(target)');
+        const songs = JSON.parse('(songs-list)');
+        const langFile = JSON.parse('(langFile)');
+    </script>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/assets/librechord_icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    ((header))
+    <main>
+        <div class="user-page">
+            <div class="user-info">
+                <div class="user-img">
+                    <bg-img id="user-img"></bg-img>
+                </div>
+                <div class="user-data">
+                    <div class="user-name">
+                        <div class="display-name"></div>
+                        <div class="real-name"></div>
+                    </div>
+                    <div class="misc">
+                        <span id="joined"></span>
+                        <span id="songs-count"></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h1>((songs))</h1>
+            <hr>
+            <div class="songs-list"></div>
+        </div>
+    </main>
+    <script src="/js/global.js"></script>
+    <script src="/js/user.js"></script>
+</body>
+
+</html>
