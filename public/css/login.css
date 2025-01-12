@@ -1,0 +1,81 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-bg {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-30deg, #ED592B, #C435DD, #3CACF1);
+    opacity: .3333;
+    position: absolute;
+    z-index: -10;
+}
+
+h1 {
+    text-align: center;
+}
+
+.login-wrapper {
+    background: var(--box-color);
+    padding: 16px;
+    box-shadow: 0 0 16px rgba(15, 31, 73, .75);
+    border-radius: 12px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    max-width: 240px;
+}
+
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.login-inputs .input {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 8px;
+    border-radius: 8px;
+    margin: 4px 0;
+}
+
+.register-offer {
+    font-size: 16px;
+}
+
+label {
+    font-size: 18px;
+}
+
+.error-input {
+    color: var(--error);
+    font-size: 16px;
+}
+
+.error-input-box {
+    outline: 1px solid var(--error);
+}
+
+html[lang="ja"] {
+    .login-wrapper {
+        max-width: 280px;
+        width: 280px;
+    }
+}
+
+html[lang="ru"] {
+    .login-wrapper {
+        min-width: 300px;
+        width: 300px;
+    }
+}

@@ -1,0 +1,33 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+<defs>
+<g id="pe_0_Layer0_0_FILL">
+<path fill="#FFFFFF" stroke="none" d="
+M 3.5 -0.55
+L 0.95 -0.55
+Q 0.2 -0.55 0 1.15
+L 0 2.7 4.45 2.7 4.45 1.15
+Q 4.25 -0.55 3.5 -0.55
+M 4.45 5.3
+L 0 5.3 0 20.55 2.25 22.8 4.45 20.55 4.45 5.3 Z"/>
+</g>
+
+<path id="pe_0_Layer0_0_1_STROKES" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 4.45 2.7
+L 4.45 1.15
+Q 4.25 -0.55 3.5 -0.55
+L 0.95 -0.55
+Q 0.2 -0.55 0 1.15
+L 0 2.7 4.45 2.7 Z
+M 0 20.55
+L 0 5.3 4.45 5.3 4.45 20.55 2.25 22.8 0 20.55 Z"/>
+</defs>
+
+<g transform="matrix( 1.1909942626953125, 1.0350799560546875, -1.0350799560546875, 1.1909942626953125, 24.2,1.45) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#pe_0_Layer0_0_FILL"/>
+
+<use xlink:href="#pe_0_Layer0_0_1_STROKES"/>
+</g>
+</g>
+</svg>

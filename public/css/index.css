@@ -1,0 +1,1143 @@
+@font-face {
+    font-family: "SF Pro Display Regular";
+    src:
+        url("/assets/fonts/SF_Pro_Display_Regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "SF Pro Display Bold";
+    src:
+        url("/assets/fonts/SF_Pro_Display_Bold.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "ヒラギノ角ゴRegular";
+    src:
+        url("/assets/fonts/Hiragino_Sans_Regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "ヒラギノ角ゴBold";
+    src:
+        url("/assets/fonts/Hiragino_Sans_Bold.woff2") format("woff2")
+}
+
+:root {
+    --bg: #01060E;
+    --search-bar-color: #0F172D;
+    --dropdown-element-color: #0c1325;
+    --dropdown-element-hover: #0a101f;
+    --upload-cover-art-hover: #0f182c;
+    --upload-cover-art-active: #15213f;
+    --dropdown-hr: #090e1b;
+    --box-color: #0f1f49;
+    --box-color-hover: 21, 44, 102;
+    --box-color-active: 33, 63, 138;
+    --error: #eb1717;
+    --bg-hover: rgb(var(--box-color-hover));
+    --bg-active: rgb(var(--box-color-active));
+    --box-shadow-hover: 0 0 16px rgba(var(--box-color-hover), .5);
+    --box-shadow-active: 0 0 16px rgba(var(--box-color-active), .5);
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    background: var(--bg);
+    font-size: 20px;
+    font-family: "SF Pro Display Regular", "ヒラギノ角ゴRegular", sans-serif;
+    color: white;
+}
+
+small {
+    font-size: 16px;
+}
+
+button {
+    font-size: 18px;
+    font-family: inherit;
+    color: #fff;
+    background: var(--search-bar-color);
+    border: none;
+    padding: 4px 12px;
+    border-radius: 8px;
+    width: fit-content;
+    transition: background .15s linear, color .15s linear;
+    outline: none;
+}
+
+button:not(:disabled):hover,
+.like-button-wrapper:hover {
+    background: #172242;
+}
+
+button:not(:disabled):active,
+.like-button-wrapper:active {
+    background: #1e2c57;
+}
+
+button:disabled {
+    background: var(--dropdown-element-color);
+    color: #666;
+}
+
+header {
+    background: linear-gradient(270deg, #ED592B, #C435DD, #3CACF1);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.librechord-logo {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    user-select: none;
+    transition: filter .15s linear;
+}
+
+.user-wrapper {
+    display: flex;
+    align-items: center;
+    width: 48px;
+    height: 64px;
+}
+
+.user-wrapper img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .75);
+    transition: box-shadow .15s linear, filter .15s linear;
+    cursor: pointer;
+}
+
+.user-wrapper img:hover {
+    box-shadow: 0 0 10px #000;
+    filter: brightness(.9);
+}
+
+.user-wrapper img:active {
+    filter: brightness(.8);
+}
+
+.search-bar {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: var(--search-bar-color);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .75);
+}
+
+.search-bar bg-img {
+    filter: invert();
+    user-select: none;
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    transition: filter .15s linear;
+    cursor: pointer;
+}
+
+.search-bar bg-img:hover {
+    filter: invert(.75);
+}
+
+.search-bar bg-img:active {
+    filter: invert(.45);
+}
+
+bg-img.magnifying-glass {
+    background-image: url("/assets/magnifying_glass.svg");
+}
+
+bg-img.x {
+    cursor: default;
+    opacity: 0;
+    background-image: url("/assets/x.svg");
+}
+
+bg-img#play {
+    width: 19px;
+    height: 32px;
+    background-image: url("/assets/play.svg");
+}
+
+bg-img#pause {
+    width: 32px;
+    height: 32px;
+    background-image: url("/assets/pause.svg");
+}
+
+.user-img {
+    width: 192px;
+    height: 192px;
+}
+
+bg-img#user-img {
+    display: inline-block;
+    width: 192px;
+    height: 192px;
+    border-radius: 12px;
+    background-size: contain;
+}
+
+input,
+textarea {
+    font-family: "SF Pro Display Regular", "ヒラギノ角ゴRegular", sans-serif;
+    background: var(--search-bar-color);
+    color: white;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.search-bar input {
+    width: 400px;
+}
+
+input::placeholder {
+    font-family: "SF Pro Display Regular", "ヒラギノ角ゴRegular", sans-serif;
+    color: rgba(255, 255, 255, .5)
+}
+
+.search-bar-blur {
+    top: 0;
+    width: 100vw;
+    height: 64px;
+    position: absolute;
+    background: linear-gradient(270deg, #ED592B, #C435DD, #3CACF1);
+    z-index: -1;
+    filter: blur(12px);
+    opacity: .5;
+}
+
+.cover-art-gradient {
+    position: absolute;
+    top: 64px;
+    width: 100vw;
+    height: 700px;
+    opacity: .5;
+    z-index: -4;
+}
+
+.cover-art img {
+    box-shadow: 0 0 12px rgba(0, 0, 0, .75);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.song-page {
+    display: flex;
+    justify-content: start;
+    gap: 32px;
+    margin: 32px;
+    width: calc(100vw - 64px);
+}
+
+.song-upper-part {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+}
+
+play-button {
+    min-width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(360deg, #ED592B, #C435DD, #3CACF1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .75);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: filter .15s linear;
+    user-select: none;
+}
+
+play-button:hover,
+.song-admin-controls img:hover,
+.remove-cover-art:hover,
+.trash-btn:hover,
+.pencil-btn:hover {
+    filter: brightness(.8);
+}
+
+play-button:active,
+.song-admin-controls img:active,
+.remove-cover-art:active,
+.trash-btn:active,
+.pencil-btn:active {
+    filter: brightness(.65);
+}
+
+.song-metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.song-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+}
+
+song-title {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+    font-size: 36px;
+}
+
+song-artist {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+song-artist img {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .75);
+}
+
+.song-metadata-lower-part {
+    display: flex;
+    align-items: center;
+}
+
+.song-metadata-lower-part span,
+.comment-user-textinfo span {
+    user-select: none;
+}
+
+waveform {
+    width: 100%;
+}
+
+.user-page,
+.search-results-wrapper,
+.song-edit-wrapper,
+.user-settings-wrapper {
+    gap: 32px;
+    flex-direction: column;
+    display: flex;
+    width: 80vw;
+    position: relative;
+    top: 32px;
+    padding: 32px;
+    background: var(--box-color);
+    border-radius: 24px;
+}
+
+.user-name {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.display-name {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+    font-size: 36px;
+}
+
+.real-name {
+    font-size: 18px;
+    opacity: .66;
+}
+
+.user-info {
+    display: flex;
+    gap: 32px;
+}
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.misc {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#joined-date {
+    text-decoration: underline dashed rgba(255, 255, 255, .325) 2px;
+    cursor: help;
+}
+
+hr {
+    width: 100%;
+    margin: 0;
+    height: 1px;
+    border: none;
+    background: rgba(255, 255, 255, .25);
+}
+
+.songs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+h1 {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+    margin: 0;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+    margin: 0;
+    font-size: 30px;
+}
+
+p {
+    margin: 0;
+}
+
+.song-artwork {
+    width: 160px;
+    height: 160px;
+}
+
+bg-img#artwork {
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    background-size: contain;
+    border-radius: 12px;
+    transition: filter .15s linear;
+}
+
+bg-img#artwork:hover {
+    filter: brightness(.7);
+}
+
+.song,
+.search-result {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.song-title {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+    font-size: 28px;
+}
+
+.song-artist {
+    font-size: 18px;
+    opacity: .66;
+}
+
+a {
+    color: #3CACF1;
+    text-decoration: none;
+    transition: color .15s linear;
+}
+
+a:hover,
+a:focus {
+    color: #2f88c0;
+    text-decoration: underline;
+}
+
+.song-metadata a {
+    color: white;
+    transition: opacity .15s linear;
+    width: fit-content;
+}
+
+.song-metadata a:hover,
+.song-metadata a:focus {
+    text-decoration: underline;
+    opacity: .7;
+}
+
+.upload-audio-wrapper {
+    width: 80vw;
+    height: 240px;
+    background: var(--box-color);
+    padding: 32px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: box-shadow .15s linear, background .15s linear;
+    user-select: none;
+}
+
+.upload-audio-wrapper:hover {
+    background: var(--bg-hover);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.upload-audio-wrapper:active {
+    background: var(--bg-active);
+    box-shadow: var(--box-shadow-active);
+}
+
+.upload-audio-wrapper p,
+.upload-audio-wrapper h1 {
+    text-align: center;
+}
+
+.song-controls-wrapper input,
+.user-input input {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.dropdown-list {
+    flex-direction: column;
+    max-height: 200px;
+    width: 240px;
+    overflow-y: scroll;
+    background: var(--dropdown-hr);
+    gap: 2px;
+
+    display: none;
+}
+
+.dropdown-item-wrapper {
+    padding: 8px;
+    background: var(--dropdown-element-color);
+    transition: background .15s linear;
+    cursor: pointer;
+}
+
+.dropdown-item-wrapper:hover {
+    background: var(--dropdown-element-hover);
+}
+
+.dropdown {
+    overflow: hidden;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 8px 8px;
+}
+
+.dropdown input {
+    width: 197px;
+    padding: 0;
+    border-radius: 0;
+}
+
+.dropdown-top-part {
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    display: flex;
+    background: var(--search-bar-color);
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.dropdown-top-part img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: filter .15s linear;
+    user-select: none;
+}
+
+.dropdown-top-part img:hover {
+    filter: brightness(.7);
+}
+
+.dropdown-top-part img:active {
+    filter: brightness(.45);
+}
+
+.user-dropdown-wrapper,
+.languages-list-wrapper {
+    z-index: 3;
+    gap: 8px;
+    flex-direction: column;
+    background: var(--search-bar-color);
+    padding: 16px;
+    width: 240px;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    border-radius: 12px;
+    display: none;
+    opacity: 0;
+    transition: opacity .15s linear;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .75);
+}
+
+.dropdown-header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.user-avatar img {
+    width: 48px;
+    height: 48px;
+}
+
+.dropdown-header .user-name * {
+    white-space: nowrap;
+    overflow: hidden;
+    width: fit-content;
+    max-width: 176px;
+    text-overflow: ellipsis;
+}
+
+.dropdown-header .display-name {
+    font-size: 20px;
+}
+
+.dropdown-header .real-name {
+    font-size: 16px;
+}
+
+.dropdown-section {
+    display: flex;
+    flex-direction: column;
+}
+
+dropdown-option,
+lang-option {
+    display: flex;
+    padding: 8px;
+    gap: 8px;
+    align-items: center;
+    transition: background .15s linear;
+    border-radius: 8px;
+}
+
+dropdown-option:hover,
+lang-option:hover {
+    background: rgba(255, 255, 255, .15)
+}
+
+dropdown-option:active,
+lang-option:active {
+    background: rgba(255, 255, 255, .3)
+}
+
+dropdown-option img {
+    width: 24px;
+    height: 24px;
+}
+
+.dropdown-section a,
+.dropdown-section a:hover,
+.dropdown-header a,
+.comment-username a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-header a,
+.comment-username a {
+    transition: opacity .15s linear;
+}
+
+.dropdown-header a:hover,
+.comment-username a:hover {
+    text-decoration: none;
+    opacity: .7;
+}
+
+.logout-section,
+.upload-input-error {
+    color: var(--error);
+}
+
+.login-a {
+    color: #000;
+    font-size: 20px;
+    transition: filter .15s linear;
+}
+
+.login-a:hover,
+.librechord-logo:hover {
+    color: #000;
+    filter: invert(.25);
+}
+
+.song-controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.song-admin-controls {
+    gap: 16px;
+    height: 24px;
+    display: none;
+}
+
+.song-admin-controls img,
+.trash-btn,
+.pencil-btn {
+    transition: filter .15s linear;
+}
+
+.song-controls-wrapper {
+    display: none;
+    gap: 32px;
+    justify-content: center;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.title-input {
+    width: 240px;
+}
+
+.errored-input {
+    outline: 1px solid var(--error);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.save-button {
+    display: none;
+}
+
+.time-progress {
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-progress div {
+    display: inline-block;
+    width: fit-content;
+    background: rgba(0, 0, 0, .75);
+    padding: 2px;
+    border-radius: 6px;
+}
+
+.trash-btn,
+.pencil-btn {
+    cursor: pointer;
+}
+
+.save-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.artwork-controls-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.remove-cover-art {
+    font-size: 16px;
+    transition: filter .15s linear;
+    cursor: pointer;
+}
+
+.remove-cover-art:hover {
+    text-decoration: underline;
+}
+
+.upload-cover-art {
+    background: var(--dropdown-element-hover);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 12px;
+    transition: background .15s linear;
+    cursor: pointer;
+    user-select: none;
+}
+
+.upload-cover-art:hover {
+    background: var(--upload-cover-art-hover);
+}
+
+.upload-cover-art:active {
+    background: var(--upload-cover-art-active);
+}
+
+.cover-art-caption {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+    font-size: 24px;
+}
+
+.failure-wrapper,
+.welcome-wrapper {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sad-face {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+    font-size: 72px;
+}
+
+.whoops {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+    font-size: 36px;
+}
+
+.welcome-heading {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+    font-size: 56px;
+    text-align: center;
+}
+
+.welcome-caption {
+    font-size: 24px;
+}
+
+.user-controls-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 32px;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 240px;
+}
+
+.user-settings-top-part {
+    display: flex;
+    justify-content: space-between;
+}
+
+button.danger {
+    color: #000;
+    background: var(--error);
+    transition: filter .15s linear;
+}
+
+button.danger:hover {
+    background: var(--error);
+    filter: brightness(.85);
+}
+
+button.danger:active {
+    background: var(--error);
+    filter: brightness(.7);
+}
+
+.song-lower-part {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listens-count {
+    height: fit-content;
+    display: flex;
+    gap: 8px;
+}
+
+.listens-count img {
+    filter: invert();
+    user-select: none;
+}
+
+.listens {
+    font-size: 12px;
+}
+
+.dropdown-lang,
+lang-option {
+    cursor: pointer;
+}
+
+lang-option {
+    gap: 4px;
+}
+
+.languages-list-wrapper {
+    position: absolute;
+    top: 249px;
+    right: 272px;
+    padding: 8px;
+    width: fit-content;
+    z-index: 4;
+    gap: 0;
+}
+
+.like-button-wrapper {
+    background: var(--search-bar-color);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    width: fit-content;
+    transition: background .15s linear, color .15s linear;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.like-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.like-button {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+.comments-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-left: 32px;
+}
+
+.comments-wrapper hr {
+    width: calc(100% - 32px);
+}
+
+.comment {
+    width: calc(100% - 32px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.comment-content {
+    margin-left: 64px;
+    width: calc(100% - 96px);
+    overflow-wrap: break-word;
+}
+
+.comment-user {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.comment-user img {
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+}
+
+.comment-username {
+    font-family: "SF Pro Display Bold", "ヒラギノ角ゴBold", sans-serif;
+}
+
+.comment-user-textinfo {
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+}
+
+.comment-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.comment-controls img {
+    width: 24px;
+    height: 24px;
+}
+
+.comment-textarea {
+    width: calc(100% - 48px);
+    padding: 16px;
+    border-radius: 8px;
+    height: 30px;
+}
+
+.send-button {
+    display: none;
+    margin-top: -16px;
+}
+
+.search-h {
+    text-align: center;
+}
+
+html[lang="ja"] {
+    .login-a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 764px) {
+    .cover-art-gradient {
+        height: calc(100vh - 64px);
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .song-edit-wrapper .song-controls-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 836px) {
+    .song-controls-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-wrapper {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .song-page {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    header #search-field {
+        width: 300px;
+    }
+
+    .user-info {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .song,
+    .search-result {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .song,
+    .search-result .song-metadata {
+        align-items: center;
+    }
+
+    .welcome-heading {
+        font-size: 32px;
+    }
+
+    .welcome-caption {
+        font-size: 18px;
+    }
+
+    .song-admin-controls {
+        flex-direction: column;
+        height: initial;
+    }
+
+    .song-metadata-lower-part {
+        gap: 8px;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .song-metadata-lower-part span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 596px) {
+    .user-controls-wrapper {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    main #search-field {
+        width: 300px;
+    }
+
+    .search-h {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    header #search-field {
+        width: calc(100vw - 220px);
+    }
+
+    .user-settings-top-part {
+        gap: 8px;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 459px) {
+    .languages-list-wrapper {
+        top: 110px;
+        right: 70px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .search-h {
+        font-size: 32px;
+    }
+
+    main #search-field {
+        width: calc(100vw - 152px);
+        font-size: 20px;
+    }
+
+    .cover-art-caption {
+        font-size: 20px;
+    }
+}
