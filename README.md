@@ -8,7 +8,7 @@ Librechord is an open-source website for sharing and publishing music. Inspired 
 3. Download this repository and unpack it in any folder.
 4. Open this folder in the terminal/command prompt.
 5. Run `npm i` to install the necessary packages.
-6. Run `npm start`. The website should be running at https://localhost:7777/
+6. Run `npm start`. The website should be running at http://localhost:7777/
 
 ## Main features
 * Account system
